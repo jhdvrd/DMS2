@@ -36,6 +36,14 @@ const addData = async ( {id, Firstname, Surname, userid} ) =>
     [id, Firstname, Surname, userid]
   )
 
+
+const getUsersRecords = async () => {
+  const res = await query('CALL users_records')
+  return res[0]
+}
+
+
+
   
 const updateData = async (id, {Firstname, Surname, userid}) =>
   execute(
@@ -54,7 +62,8 @@ export {
   getDataById,
   logonUsers,
   deleteData,
-  updateData
+  updateData,
+  getUsersRecords,
 }
 
 /*
