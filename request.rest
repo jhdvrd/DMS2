@@ -35,3 +35,4 @@ Authorization: Bearer {{login.response.body.access_token}}
 
 ###
 GET http://localhost:3000/doc
+
